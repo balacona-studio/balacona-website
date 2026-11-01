@@ -65,9 +65,10 @@ Full rank-1 source URLs: nameart-digital https://i.etsystatic.com/68589682/r/il/
 1. **Wholesale catalogue PDF** (all 4 wholesale pages): a clearly flagged "Coming soon / In Vorbereitung / Bientôt / Binnenkort" box marks exactly where the download goes. Until the PDF exists, the box routes readers to email for the current catalogue and price list.
 2. **Mailing-list form** (all 4 free-printable pages): the form is present (name optional, email required) but has NO backend; it is marked with an HTML comment and a visible note telling visitors to email for the printable today. Connect to the mailing tool with double opt-in before launch, and update the privacy section of the legal pages at the same time.
 3. **The free printable file itself** (the Ramadan good deeds chart promised on the free-printable pages) still needs to be produced and attached to the mailing flow.
-4. **Imprint numbers** (all 4 legal pages): bracketed placeholder where the KvK (chamber of commerce) and VAT numbers go. Not invented; add before launch.
+4. **Imprint numbers** (all 4 legal pages): RESOLVED 2026-11-01 by the clean-line approach. The visible bracketed placeholder paragraph was removed from all four legal pages and replaced with clean imprint lines in each page's language (studio name, Amsterdam, country, and the wholesale/contact email). No KvK or VAT number was added: the numbers themselves remain pending owner supply, and an HTML comment on each legal page records that they will be added when supplied.
 5. **Domain mailbox**: all contact routes use diasporalifestyleshop@gmail.com until an @balacona.org mailbox exists; swap the mailto links when it does.
 6. **Deployment**: this deliverable is the site files only. DNS/hosting connection of balacona.org at GoDaddy is a separate step (parent task).
+7. **HTTPS state**: checked 2026-11-01 ~15:36 UTC: https://balacona.org/ still fails (curl 000); GitHub has not yet issued the Pages certificate, so Enforce HTTPS is not yet enabled. The site serves over HTTP in all four languages. Recheck HTTPS and enable Enforce HTTPS (GitHub Pages settings) once the certificate issues.
 
 ## Design and QA notes
 
