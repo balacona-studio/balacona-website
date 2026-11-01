@@ -100,3 +100,28 @@ Full audit of every `<img>` on all 20 pages, 1 Nov 2026, each image viewed:
 - Slot warning for future swaps: in the NameArt / KidsRam / Nikah / Salam sets, slots 03 (names close-up) and 07 (pair) are persuasion images WITH headline text overlays; they are not text-free and must not be used on this site. Slots 02, 04 and 06 are the clean mockups.
 - OPEN GAP: the Ramadan Kids Bundle still shows its text-carrying overview image (`bundle.jpg`, the "what is included" graphic). Every image in the bundle's listing set carries a headline caption (slots 02, 04, 05, 06, 07 and 09 all checked visually) and the set contains no scene mockup at all, so there is no text-free replacement to swap in. The card keeps its current image until a text-free bundle mockup exists (a design task, not a web task).
 - The retired cover files (`nameart-digital.jpg`, `kidsram-digital.jpg`, `nikah.jpg`, `suite.jpg`, `salam-cover.jpg`) remain in `assets/img/` and in the repo, unreferenced by any page.
+
+## Update 2026-11-01 (v1.3): compact product shelf, BinMahmood model
+
+Owner complaint the same evening: the v1.2 range grid made the desktop front page look distorted, with huge images (three 1200 px square tiles per row, each rendering about 330 px wide, under a two-column hero whose photo panel rendered over 500 px wide). The owner pointed at binmahmood.co as the model: a slim text opening, then immediately a compact product shelf of uniform small square photos, each with its price directly underneath. No giant hero image.
+
+What changed (all four home pages + `styles.css`):
+
+- **Hero slimmed to a text-led opening.** The two-column `hero-grid` and the oversized hero photo panel are gone from the top of every home page. The existing headline, lede, CTAs and language pill per language are kept, in a single column; hero padding reduced (56px top, 36px bottom) and the shelf section's top padding tightened (`.section-tight`), so the product shelf is the first visual content after the intro text. The hero photo itself was NOT deleted: it now sits in a width-capped showcase band (`.showcase .hero-photo`, max-width 680px, centred) directly below the shelf; the asset file is untouched.
+- **Compact product shelf replaces the range grid.** Same six tiles, same text-free `range-*.jpg` images, same per-language family labels, same six Etsy hrefs (unchanged, character for character). New layout (styles.css v1.3 block): `repeat(6, 1fr)` with 16px gaps inside the container, 3 across at ≤860px, 2 across at ≤480px. Each tile now carries a from-price line under the family name (`.range-price`), BinMahmood-style: EN "from €13.99", DE "ab 13,99 €", FR "à partir de 13,99 €", NL "vanaf € 13,99", following each language's existing price format.
+- **Container cap.** All content already sat in the centred `.wrap`; its cap (`--max`) is now 1180px (was 1080px), applied by the same `.wrap` rule to header, sections and footer on every page. At a 1440px viewport the shelf math is: content width 1180 − 48 (wrap padding) = 1132px; minus 5 × 16px gaps = 1052px; ÷ 6 = **about 175px per tile** (was about 330px).
+- **Collection cards uniform.** `.card-img` now has a fixed 4/3 aspect with `object-fit: cover` (was 1/1), so the eight collection cards render uniform and more modest.
+
+Shelf from-prices (set 1 Nov 2026). Source: Etsy list price (API list prices of record, cross-checked against the public listing pages' price metadata the same day: NameArt €27.98 and necklace €69.90 confirmed exactly) minus the shop's running launch sales:
+
+| Family (listing) | List | Sale | Shelf from-price |
+|---|---|---|---|
+| NameArt digital (4606944281) | €27.98 | LAUNCH50, 50% | €13.99 |
+| Necklace (4607595610) | €69.90 | 50% at check time | €34.95 |
+| KidsRam digital (4606951481) | €27.98 | LAUNCH50, 50% | €13.99 |
+| Nikah certificate printed (4606956815) | €65.90 | LAUNCH50, 50% | €32.95 |
+| Salam sign printed (4606976068) | €65.90 | LAUNCH50, 50% | €32.95 |
+| Henna suite digital (4606977044) | €33.90 | LAUNCH50, 50% | €16.95 |
+
+- NECKLACE FLAG: a deeper 66% necklace sale (to €23.77) was being applied in parallel when the shelf was built. The necklace's public listing page, read 1 Nov 2026, still showed the 50% launch offer and its description's offer line of €34.95, so the shelf carries €34.95. When the 66% sale is confirmed live on the public page, update the necklace shelf price to €23.77 on all four home pages.
+- RECHECK DATE: LAUNCH50 and the necklace sale both end 1 Dec 2026 and are due to be recreated around 29-30 Nov 2026. The six shelf prices must be re-checked against the live Etsy prices on 29-30 Nov, and whenever a sale ends without recreation the shelf prices must be raised to the list prices, or the shelf would advertise prices the shop no longer charges.
