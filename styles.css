@@ -14,7 +14,7 @@
   --gold: #FFD86B;
   --gold-line: #C29A5B;
   --white: #FFFFFF;
-  --max: 1080px;
+  --max: 1180px;
   --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --sans: "Jost", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   --arabic: "Amiri", Georgia, serif;
@@ -76,7 +76,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold-line); out
 .btn-outline:hover { background: var(--beige); }
 
 /* ---------- hero ---------- */
-.hero { padding: 72px 0 64px; }
+.hero { padding: 56px 0 36px; }
 .hero-grid {
   display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center;
 }
@@ -232,7 +232,7 @@ h1 {
 /* product cards */
 .cards-products { grid-template-columns: repeat(4, 1fr); }
 .card { overflow: hidden; }
-.card-img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; background: var(--beige-2); }
+.card-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: var(--beige-2); }
 .card-tag {
   display: inline-block; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--ink-soft); border: 1px solid var(--gold-line); border-radius: 999px;
@@ -296,8 +296,14 @@ h1 {
 .lang-switch a:hover { color: var(--ink); border-color: var(--gold-line); }
 .lang-switch a.current { color: var(--ink); font-weight: 600; border-color: var(--gold-line); background: var(--beige); }
 
-/* ---------- v1.2 additions: product range grid ---------- */
-.range-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+/* ---------- v1.3: compact product shelf (binmahmood.co model) ----------
+   The v1.2 range grid rendered as three huge square tiles per row on
+   desktop. v1.3 replaces it with a modest shop shelf: six small square
+   tiles in one row inside the capped container, family name and
+   from-price under each photo. The hero is now text-led; the old hero
+   photo sits in a width-capped showcase band below the shelf. */
+.section-tight { padding-top: 12px; }
+.range-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
 .range-tile {
   text-decoration: none; background: var(--white); border: 1px solid var(--beige);
   display: flex; flex-direction: column; overflow: hidden;
@@ -306,15 +312,16 @@ h1 {
 .range-tile img {
   width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; background: var(--beige-2);
 }
-.range-tile span {
-  padding: 13px 16px; font-weight: 600; font-size: 15.5px;
-  display: flex; align-items: center; justify-content: space-between; gap: 10px;
-}
-.range-tile span::after { content: "\2192"; color: var(--gold-line); flex: none; }
+.range-tile .tile-text { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 2px; }
+.range-tile .range-name { font-weight: 600; font-size: 14px; line-height: 1.35; }
+.range-tile .range-price { font-size: 13.5px; color: var(--ink-soft); }
+.showcase { padding-bottom: 64px; }
+.showcase .hero-photo { max-width: 680px; margin: 0 auto; }
 @media (max-width: 860px) {
-  .range-grid { grid-template-columns: repeat(2, 1fr); }
+  .range-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 480px) {
-  .range-grid { gap: 12px; }
-  .range-tile span { font-size: 14px; padding: 10px 12px; }
+  .range-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .range-tile .tile-text { padding: 8px 10px 10px; }
+  .range-tile .range-name { font-size: 13.5px; }
 }
