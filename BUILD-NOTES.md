@@ -75,3 +75,28 @@ Full rank-1 source URLs: nameart-digital https://i.etsystatic.com/68589682/r/il/
 - Identity follows the existing `styles.css` (Style Guide palette: warm white and calm beige grounds, navy ink #1C2440, gold #FFD86B / line #C29A5B; Jost / Cormorant Garamond / Amiri). v1.1 additions only appended: product cards, hero photo, subpage blocks, signup form, placeholder box, legal prose, language switcher.
 - No emojis anywhere; no em dashes in any visible text (checked by grep); the Arabic word for the marriage contract appears in designs only as عقد القران, and "Nikah" is used in Latin script only, matching the listings.
 - QA run 2026-11-01: all 20 pages serve HTTP 200 from a local static server; every internal link and image resolves; every home page has exactly 8 buy links; every Etsy URL on the site matches a live API record; every page has exactly one active language-switcher state.
+
+## Update 2026-11-01 (v1.2): range grid at first glance + website image rule
+
+Two owner directives of 1 November 2026, applied the same day.
+
+### Directive 1: the whole range visible at first glance
+
+The owner liked binmahmood.co because all product types are visible at first sight. Every language home page now carries a product-range grid directly under the hero (new `<section id="range">`, styles appended to `styles.css` as v1.2 `.range-grid` / `.range-tile`, responsive 3 columns, 2 on small screens, no JavaScript):
+
+- Six tiles, one per live product family: Personalised Arabic name print, Arabic name necklace, Ramadan calendar for kids, Nikah certificate, Salam welcome sign, Henna wedding suite.
+- Each tile is a text-free close mockup (see Directive 2) plus the family name in the page's language, and links to the family's Etsy listing. NameArt, KidsRam, Nikah, Salam and Suite reuse the exact listing URLs already verified on the cards; the necklace tile links to https://www.etsy.com/listing/4607595610/personalised-arabic-name-necklace-custom (published 1 Nov 2026, Coordinator's publish record).
+- DE/FR/NL tile labels mirror the terminology of that language's product cards (e.g. DE "Personalisiertes arabisches Namensbild", "Nikah-Urkunde"; FR "Affiche de noms en calligraphie arabe", "Certificat de Nikah"; NL "Arabische naamprint", "Nikah-certificaat"). The necklace has no card yet, so its label is a plain translation per language (DE "Arabische Namenskette", FR "Collier prénom en arabe", NL "Arabische naamketting").
+- New tile images (all text-free mockup slots from the listing sets in `~/workspace/company-hq/listing-build/`, resized to max 1200 px wide, JPEG q80): `range-nameart.jpg` (NAMEART-EN-06 white frame), `range-necklace.jpg` (necklace-final-set 01-hero, worn silver), `range-kidsram.jpg` (KIDSRAM-EN-06 white frame), `range-nikah.jpg` (NIKAHCERT-EN-04 pinned print), `range-salam.jpg` (SALAM-EN-06 white frame, terracotta), `range-suite.jpg` (SUITE-EN-06 henna welcome sign).
+
+### Directive 2: website image rule (owner, standing)
+
+The website must NOT use the Etsy cover images that carry text (title, Arabic headline, badge, language pill). Those covers are Etsy-only. On the website every product image is a text-free, distinctive close mockup. Text that is part of the product artwork itself (the personalised names and wording printed on the product) is fine.
+
+Full audit of every `<img>` on all 20 pages, 1 Nov 2026, each image viewed:
+
+- REPLACED (text-carrying covers): `nameart-digital.jpg` (NameArt rank 1 cover) replaced by `nameart-pinned.jpg` (NAMEART-EN-04 pinned print) on all 4 home pages; `kidsram-digital.jpg` (rank 1 cover) replaced by `kidsram-pinned.jpg` (KIDSRAM-EN-04 pinned print) on all 4 home pages; `nikah.jpg` (rank 1 cover) replaced by `nikah-oak.jpg` (NIKAHCERT-EN-02 oak-frame mockup) on all 4 home pages; `suite.jpg` (rank 1 cover) replaced by `suite-flatlay.jpg` (SUITE-EN-02 flat-lay mockup) on all 4 home pages; `salam-cover.jpg` (Salam rank 1 cover) replaced by `salam-pinned.jpg` (SALAM-EN-04 pinned print, cobalt) on all 4 wholesale pages. Alt texts updated in each language where the old alt described the cover.
+- KEPT (already text-free mockups): `hero.jpg` (NameArt living-room scene), `nameart-printed.jpg` (oak-frame wall mockup), `kidsram-printed.jpg` (two calendars on a wall), `salam.jpg` (framed sign on a wall).
+- Slot warning for future swaps: in the NameArt / KidsRam / Nikah / Salam sets, slots 03 (names close-up) and 07 (pair) are persuasion images WITH headline text overlays; they are not text-free and must not be used on this site. Slots 02, 04 and 06 are the clean mockups.
+- OPEN GAP: the Ramadan Kids Bundle still shows its text-carrying overview image (`bundle.jpg`, the "what is included" graphic). Every image in the bundle's listing set carries a headline caption (slots 02, 04, 05, 06, 07 and 09 all checked visually) and the set contains no scene mockup at all, so there is no text-free replacement to swap in. The card keeps its current image until a text-free bundle mockup exists (a design task, not a web task).
+- The retired cover files (`nameart-digital.jpg`, `kidsram-digital.jpg`, `nikah.jpg`, `suite.jpg`, `salam-cover.jpg`) remain in `assets/img/` and in the repo, unreferenced by any page.
