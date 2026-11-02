@@ -2,8 +2,7 @@
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Das Atelier · Balacona Studio</title>
 <meta name="description" content="Balacona Studio ist eine kleine Gruppe von Künstlern in Amsterdam: zweisprachige arabische Kalligraphie und Familien-Printables, Großhandel für Shops, Schulen und Moscheen, und Kooperationen mit Creators.">
-<link rel="canonical" href="https://balacona.org/de/studio.html">
-<link rel="alternate" hreflang="en" href="https://balacona.org/studio.html"><link rel="alternate" hreflang="de" href="https://balacona.org/de/studio.html">
+<link rel="canonical" href="https://balacona.org/de/studio.html"><link rel="alternate" hreflang="en" href="https://balacona.org/studio.html"><link rel="alternate" hreflang="de" href="https://balacona.org/de/studio.html"><link rel="alternate" hreflang="fr" href="https://balacona.org/fr/studio.html"><link rel="alternate" hreflang="nl" href="https://balacona.org/nl/studio.html"><link rel="alternate" hreflang="x-default" href="https://balacona.org/studio.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314213d'/%3E%3Cpath d='M22 52V34a10 10 0 0 1 20 0v18h-6V34a4 4 0 0 0-8 0v18z' fill='%23f2b33d'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,900&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;500;700&family=Amiri:wght@400;700&family=Reem+Kufi:wght@500;600;700&display=swap" rel="stylesheet">
@@ -50,7 +49,7 @@
 <p class="kick" style="color:var(--gold)">Großhandel</p>
 <h2 class="serif" style="font-size:clamp(32px,4.4vw,48px);margin:0 0 12px;color:#fff">Für Buchhandlungen, Schulen und Moscheen.</h2>
 <p style="color:#dfe4fb;line-height:1.7;max-width:600px">Wir beliefern islamische Buchhandlungen, Schulen, Moscheen und Geschenkläden mit den Kalendern, Schildern und Urkunden, nach denen Ihre Kunden bereits suchen, in der Sprache Ihrer Stadt. Balacona Studio ist ein kleines Designatelier in Amsterdam; unser Einzelhandelsverkauf läuft über Etsy, und Handelsbestellungen werden als individuelles Etsy-Angebot vorbereitet, sodass Zahlung und Lieferung innerhalb von Etsy geschützt bleiben.</p>
-<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:760px;margin:22px 0 30px" class="abgrid">
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:760px;margin:22px 0 30px" class="abgrid twocol">
 <div style="border:2px solid #ffffff55;border-radius:16px;padding:16px 18px"><strong>Vier Sprachen.</strong> <span style="color:#dfe4fb">Englische, niederländische, deutsche und französische Ausgaben, jede mit Arabisch.</span></div>
 <div style="border:2px solid #ffffff55;border-radius:16px;padding:16px 18px"><strong>Personalisierung in Serie.</strong> <span style="color:#dfe4fb">Namen für eine ganze Klasse oder Gemeinde, jeder von Hand geprüft.</span></div>
 <div style="border:2px solid #ffffff55;border-radius:16px;padding:16px 18px"><strong>Handelsmengen.</strong> <span style="color:#dfe4fb">Der vollständige Katalog, gedruckt und geliefert oder als digitale Dateien.</span></div>
@@ -58,12 +57,12 @@
 <form id="wholesaleForm" style="background:var(--white);color:var(--ink);border:2px solid var(--ink);border-radius:22px;padding:26px;max-width:640px">
 <h3 class="serif" style="font-size:25px;margin:0 0 14px">Großhandelsanfrage</h3>
 <div style="display:grid;gap:12px">
-<input class="input" id="wName" data-label="Name" type="text" required placeholder="Ihr Name" autocomplete="name">
-<input class="input" id="wEmail" data-label="E-Mail" type="email" required placeholder="E-Mail" autocomplete="email">
-<input class="input" id="wOrg" data-label="Shop oder Organisation" type="text" placeholder="Shop oder Organisation">
-<input class="input" id="wProducts" data-label="Produkte und Mengen" type="text" placeholder="Produkte und Mengen, z. B. 30 Kinderkalender, Deutsch">
-<input class="input" id="wCountry" data-label="Lieferland" type="text" placeholder="Lieferland">
-<textarea class="input" id="wMsg" data-label="Sonstiges" placeholder="Alles andere, was wir wissen sollten"></textarea>
+<input class="input" id="wName" data-label="Name" aria-label="Name" type="text" required placeholder="Ihr Name" autocomplete="name">
+<input class="input" id="wEmail" data-label="E-Mail" aria-label="E-Mail" type="email" required placeholder="E-Mail" autocomplete="email">
+<input class="input" id="wOrg" data-label="Shop oder Organisation" aria-label="Shop oder Organisation" type="text" placeholder="Shop oder Organisation">
+<input class="input" id="wProducts" data-label="Produkte und Mengen" aria-label="Produkte und Mengen" type="text" placeholder="Produkte und Mengen, z. B. 30 Kinderkalender, Deutsch">
+<input class="input" id="wCountry" data-label="Lieferland" aria-label="Lieferland" type="text" placeholder="Lieferland">
+<textarea class="input" id="wMsg" data-label="Sonstiges" aria-label="Sonstiges" placeholder="Alles andere, was wir wissen sollten"></textarea>
 <button class="btn btn-ink" type="submit" style="justify-content:center">Anfrage senden</button>
 <p style="font-size:13.5px;color:var(--muted);margin:0">Die Schaltfläche öffnet Ihre E-Mail-App mit der Anfrage an diasporalifestyleshop@gmail.com. Wir antworten auf Englisch, Deutsch, Französisch oder Niederländisch.</p>
 </div></form></div></section>
@@ -92,7 +91,7 @@
 <section id="contact"><div class="wrap" style="padding-top:64px;padding-bottom:72px">
 <p class="kick">Kontakt</p>
 <h2 class="serif" style="font-size:clamp(32px,4.4vw,48px);margin:0 0 20px">Sprechen Sie mit dem Atelier.</h2>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:22px" class="abgrid">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:22px" class="abgrid twocol">
 <div style="background:var(--white);border:2px solid var(--ink);border-radius:22px;padding:28px">
 <h3 class="serif" style="font-size:25px;margin:0 0 8px">Nachricht an uns auf Etsy</h3>
 <p style="color:var(--muted);line-height:1.65">Am schnellsten für alles rund um eine Bestellung, eine Vorschau oder eine Lieferung.</p>
@@ -105,7 +104,7 @@
 
 <footer class="foot"><div class="wrap" style="position:relative;padding-top:56px;padding-bottom:34px">
 <div style="position:absolute;right:0;top:0;opacity:0.07;display:grid;grid-template-columns:repeat(3,72px);gap:2px" aria-hidden="true"><svg width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#f2b33d" stroke-width="1.4" aria-hidden="true"><path d="M36 6 L43 29 L66 36 L43 43 L36 66 L29 43 L6 36 L29 29 Z"/><circle cx="36" cy="36" r="6"/></svg><svg width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#f2b33d" stroke-width="1.4" aria-hidden="true"><path d="M36 6 L43 29 L66 36 L43 43 L36 66 L29 43 L6 36 L29 29 Z"/><circle cx="36" cy="36" r="6"/></svg><svg width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#f2b33d" stroke-width="1.4" aria-hidden="true"><path d="M36 6 L43 29 L66 36 L43 43 L36 66 L29 43 L6 36 L29 29 Z"/><circle cx="36" cy="36" r="6"/></svg><svg width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#f2b33d" stroke-width="1.4" aria-hidden="true"><path d="M36 6 L43 29 L66 36 L43 43 L36 66 L29 43 L6 36 L29 29 Z"/><circle cx="36" cy="36" r="6"/></svg><svg width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#f2b33d" stroke-width="1.4" aria-hidden="true"><path d="M36 6 L43 29 L66 36 L43 43 L36 66 L29 43 L6 36 L29 29 Z"/><circle cx="36" cy="36" r="6"/></svg><svg width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#f2b33d" stroke-width="1.4" aria-hidden="true"><path d="M36 6 L43 29 L66 36 L43 43 L36 66 L29 43 L6 36 L29 29 Z"/><circle cx="36" cy="36" r="6"/></svg><svg width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#f2b33d" stroke-width="1.4" aria-hidden="true"><path d="M36 6 L43 29 L66 36 L43 43 L36 66 L29 43 L6 36 L29 29 Z"/><circle cx="36" cy="36" r="6"/></svg><svg width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#f2b33d" stroke-width="1.4" aria-hidden="true"><path d="M36 6 L43 29 L66 36 L43 43 L36 66 L29 43 L6 36 L29 29 Z"/><circle cx="36" cy="36" r="6"/></svg><svg width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#f2b33d" stroke-width="1.4" aria-hidden="true"><path d="M36 6 L43 29 L66 36 L43 43 L36 66 L29 43 L6 36 L29 29 Z"/><circle cx="36" cy="36" r="6"/></svg></div>
-<div class="cols" style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;position:relative">
+<div class="cols">
 <div><p class="serif" style="font-size:26px;font-weight:700;margin:0 0 8px">Balacona <span class="ar" style="font-size:18px;color:var(--gold)">بلكونة</span></p>
 <p style="color:#c6cddd;line-height:1.65;margin:0;max-width:300px">Personalisierte arabische Kalligraphie, Kalender und Geschenke, entworfen in Amsterdam. Alle Bestellungen werden auf Etsy aufgegeben und bezahlt.</p></div>
 <div><h3>Shop</h3><a href="shop/wall-art.html">Islamische Wandkunst</a><a href="shop/calendars.html">Kalender &amp; Ramadan</a><a href="shop/ramadan.html">Ramadan &amp; Eid</a><a href="shop/kids.html">Lernen &amp; Spielen für Kinder</a><a href="shop/invitations.html">Einladungen &amp; Anlässe</a><a href="shop/prayer.html">Gebet &amp; Alltag</a></div>
