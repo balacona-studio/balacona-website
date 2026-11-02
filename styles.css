@@ -40,7 +40,7 @@ font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--pap
 .nav a.on{background:var(--ink);color:#fff}
 .sbtn{width:48px;height:48px;border-radius:50%;border:2px solid var(--ink);background:transparent;display:grid;place-items:center;cursor:pointer;color:var(--ink)}
 .sbtn:hover{background:var(--gold)}
-.sec{padding:clamp(56px,8vw,104px) 0}
+.sec{padding-top:clamp(56px,8vw,104px);padding-bottom:clamp(56px,8vw,104px)}
 .h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(38px,5vw,64px);line-height:1;letter-spacing:-.01em;text-wrap:balance}
 .lead{font-size:18px;color:var(--muted);max-width:56ch;text-wrap:pretty}
 .arch{border-radius:999px 999px 0 0;position:relative;overflow:hidden}
