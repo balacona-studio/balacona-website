@@ -7,7 +7,7 @@ font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--pap
 .site h1,.site h2,.site h3,.site h4,.site p,.site ul{margin:0;padding:0}
 .site ul{list-style:none}
 .site a:focus-visible,.site button:focus-visible,.site input:focus-visible{outline:3px solid var(--P);outline-offset:3px}
-.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(24px,5vw,64px)}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(28px,7vw,120px)}
 .serif{font-family:'Cormorant Garamond',Georgia,serif}
 .ar{font-family:'Aref Ruqaa','Amiri',serif;direction:rtl;line-height:1.35}
 .arui{font-family:'Tajawal',system-ui,sans-serif;direction:rtl}
